@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            background-color: #1faee9;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1a93c4;
+        }
+        .form-input {
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 180px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask Web App</h1>
+
+    <!-- Форма для GET-запроса -->
+    <h2>GET Request</h2>
+    <form action="/get" method="GET">
+        <div class="form-input">
+            <label for="param1">Param1:</label>
+            <input type="text" id="param1" name="param1" required>
+        </div>
+        <div class="form-input">
+            <label for="param2">Param2:</label>
+            <input type="text" id="param2" name="param2" required>
+        </div>
+        <button type="submit" class="btn">Send GET Request</button>
+    </form>
+
+    <!-- Форма для POST-запроса -->
+    <h2>POST Request</h2>
+    <form action="/post" method="POST">
+        <div class="form-input">
+            <label for="post_param1">Param1:</label>
+            <input type="text" id="post_param1" name="param1" required>
+        </div>
+        <div class="form-input">
+            <label for="post_param2">Param2:</label>
+            <input type="text" id="post_param2" name="param2" required>
+        </div>
+        <button type="submit" class="btn">Send POST Request</button>
+    </form>
+
+    <!-- Кнопки для HEAD и OPTIONS запросов -->
+    <h2>HEAD Request</h2>
+    <a class="btn" href="/head" id="head-btn">Send HEAD Request</a>
+
+    <h2>OPTIONS Request</h2>
+    <a class="btn" href="/options" id="options-btn">Send OPTIONS Request</a>
+</body>
+</html>
